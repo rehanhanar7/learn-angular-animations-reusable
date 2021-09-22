@@ -1,0 +1,27 @@
+<div [@firstanimation]="myelementstate" style="height:10vw;width:10vw;">
+</div>
+<br>
+<button (click)="enablefirstanimation()">First Animation</button>
+<br>
+<br>
+<div [@secondanimation]="myelementsecondstate" style="height:10vw;width:10vw;background-color:red">
+</div>
+<br>
+<button (click)="shrinksecondanimation()">Second Shrinking</button>
+<br>
+<br>
+<div [@ngif_animation] style="height:10vw;width:10vw;background-color:blue" *ngIf="showflag"></div>
+<br>
+<button (click)="showDiv()">show and Hide Div *ngIf</button>
+<br>
+<br>
+<div [@transitionphaseanimation]="transitionphases_state" style="height:10vw;width:10vw;background-color:blue"></div>
+<br>
+<button (click)="transitionphases()">transitionphases</button>
+<br>
+<br>
+<div [@keyframe_animation_trig]="keyframe_animation_state" (@keyframe_animation_trig.start)="startevent($event)"
+  (@keyframe_animation_trig.done)="endevent($event)" style="height:10vw;width:10vw;background-color:blue"></div>
+<!-- callback events once animation started and animation ended -->
+<br>
+<button (click)="start_keyframe_animation()">Start Key Frame Animation</button>
